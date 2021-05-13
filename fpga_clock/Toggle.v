@@ -7,9 +7,9 @@ module Toggle(
   /* Create a toggle.
   out changes value on each posedge of in */
   always @(posedge in) begin
-    if (reset) toggled <= 0;  // set the counter to 0
+    if (reset) toggled <= 0;  // set the toggle to False
     else toggled <= !toggled;
   end
 
-  assign out = toggled;
+  assign out = toggled & ~reset;
 endmodule
