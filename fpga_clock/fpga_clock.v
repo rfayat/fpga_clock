@@ -3,7 +3,7 @@ module fpga_clock(
   input reset ,
   output syncout);
 
-  parameter FREQ_CLK = 50000000;
+  parameter FREQ_CLK = 2000000;
   wire pulsePeriodique ; // True for one clk period every FREQ_CLK clk posedges
 
   // Create the frequency diviser
