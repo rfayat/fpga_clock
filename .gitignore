@@ -1,3 +1,10 @@
+## Verilog stuff
+fpga*/output_files/*
+fpga*/db/*
+fpga*/incremental_db/*
+fpga*/simulation/*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
