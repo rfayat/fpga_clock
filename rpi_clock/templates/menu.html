@@ -1,0 +1,14 @@
+{%extends "base.html" %}
+{% block content %}
+
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <main>
+    <h1>Start and stop the FPGA clock</h1>
+    <p class="fs-5 col-md-8">Simply press the buttons below to start and stop the FPGA clock !</p>
+    <div class="mb-5">
+      <a href="{{url_for('start')}}" class="btn btn-success btn-lg px-4">Start</a>
+      <a href="{{url_for('stop')}}" class="btn btn-danger btn-lg px-4">Stop</a>
+    </div>
+  </main>
+</div>
+{% endblock %}
