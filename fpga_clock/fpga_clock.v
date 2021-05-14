@@ -1,5 +1,6 @@
 module fpga_clock(
   input clk ,
+  input enable,
   input reset ,
   output syncout);
 
@@ -14,7 +15,9 @@ module fpga_clock(
   );
 
   Toggle toggle(
-    .in(pulsePeriodique),
+    .clk(clk),
+    .enable(enable),
+    .pulse(pulsePeriodique),
     .reset(reset),
     .out(syncout)
   );
