@@ -1,4 +1,7 @@
-## Verilog stuff
+# Raspberry pi environment
+fpga_clock_env/
+
+# Verilog stuff
 fpga*/output_files/*
 fpga*/db/*
 fpga*/incremental_db/*

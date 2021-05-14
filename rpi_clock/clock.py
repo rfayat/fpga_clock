@@ -76,13 +76,15 @@ class Clock_Handler():
         GPIO.cleanup()
 
 if __name__ == "__main__":
-    handler = Clock_Handler(verbose=True)
-    time.sleep(1.)
-
-    for _ in range(4):
-        handler.enable()
-        time.sleep(3.)
-        handler.disable()
+    try:
+        handler = Clock_Handler(verbose=True)
         time.sleep(1.)
-    time.sleep(2.)
-    handler.cleanup()
+
+        for _ in range(4):
+            handler.enable()
+            time.sleep(3.)
+            handler.disable()
+            time.sleep(1.)
+        time.sleep(2.)
+    finally:
+        handler.cleanup()
