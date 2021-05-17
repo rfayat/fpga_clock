@@ -57,8 +57,12 @@ set_global_assignment -name VERILOG_FILE fpga_clock.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_7 -to syncout
-set_location_assignment PIN_41 -to reset
+set_location_assignment PIN_73 -to syncout
+set_location_assignment PIN_89 -to reset
 set_location_assignment PIN_17 -to clk
-set_location_assignment PIN_40 -to enable
+set_location_assignment PIN_87 -to enable
+set_location_assignment PIN_93 -to is_enabled
+set_location_assignment PIN_96 -to is_on
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name STRATIX_CONFIGURATION_DEVICE EPCS4
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
