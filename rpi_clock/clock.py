@@ -7,8 +7,8 @@ import time
 from functools import wraps
 
 # Default pins for the raspberry (BCM numbering)
-ENABLE_PIN = 21
-RESET_PIN = 20
+ENABLE_PIN = 23
+RESET_PIN = 24
 
 
 class Clock_Handler():
