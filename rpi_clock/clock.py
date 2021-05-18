@@ -58,10 +58,14 @@ class Clock_Handler():
         "Return the state of the enable pin (False for low, True for high)"
         return GPIO.input(self.enable_pin)
 
-    @add_verbose_message("Setting enable pin to high")
+    @add_verbose_message("Resetting and setting enable pin to high")
     def enable(self):
         "Change the state of the enable pin to high"
+        GPIO.output(self.reset_pin, GPIO.HIGH)
         GPIO.output(self.enable_pin, GPIO.HIGH)
+        time.sleep(1e-6)
+        GPIO.output(self.reset_pin, GPIO.LOW)
+
 
     @add_verbose_message("Setting enable pin to low")
     def disable(self):
